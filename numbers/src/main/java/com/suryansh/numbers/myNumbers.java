@@ -50,12 +50,13 @@ public class myNumbers {
 				// TODO Auto-generated catch block
 				System.out.println(e);
 			}
+			if(json != null) {
+				JSONArray jarr = json.getJSONArray("numbers");
 			
-			JSONArray jarr = json.getJSONArray("numbers");
-			
-			if(jarr != null) {
-				for(int i = 0; i < jarr.length(); i++) {
-					st.add(jarr.getInt(i));
+				if(jarr != null) {
+					for(int i = 0; i < jarr.length(); i++) {
+						st.add(jarr.getInt(i));
+					}
 				}
 			}
 		}
